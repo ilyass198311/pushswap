@@ -14,13 +14,27 @@ int check_int(char *str)
     }
     return (0);
 }
-int check_c
-int check_double(char *str)
+int check_char()
+{
+
+}
+
+int check_double(char *str,int nbr)
 {
     int i;
+    int count;
 
     i = 0;
-
+    count = 0;
+    while (str[i])
+    {
+        if(str[i] == nbr)
+            count++;
+        i++;
+    }
+    if (count > 1)
+        return (1);
+    return (0);
 }
 
 int check_all(int ac, char **av)
